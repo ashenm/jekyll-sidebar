@@ -1,0 +1,62 @@
+= Jekyll Sidebar
+:toc:
+:toc-placement!:
+:warning-caption: :warning:
+:note-caption: :paperclip:
+
+[discrete]
+====== The Jekyll Sidebar is a mobile-first two-column Jekyll theme inspired by link:http://hyde.getpoole.com[Hyde].
+image:https://travis-ci.org/ashenm/jekyll-sidebar.svg?branch=latest["Build Status", link="https://travis-ci.org/ashenm/jekyll-sidebar"]
+
+image:https://github.com/ashenm/jekyll-sidebar/blob/docs/img/screencast-mobile.gif["A Jekyll Sidebar Site on A Mobile Device", height="360"] image:https://github.com/ashenm/jekyll-sidebar/blob/docs/img/screenshot.png["A Jekyll Sidebar Site on A Larger Device", height="360"]
+
+[discrete]
+=== Table of Contents
+toc::[title="", levels=4]
+
+=== Getting Started
+[source, shell]
+----
+git clone https://github.com/ashenm/jekyll-workspace.git
+----
+
+=== Constituents
+
+==== Links
+
+The _Jekyll Sidebar Links_ facilitates external link placement on the navigation bar for external resources via the data file `links.yaml`.
+
+The data file mandates the following structure; a YAML list composing of YAML associative arrays where each associative array corresponds to a single link to be placed on the navbar.
+
+[source, yaml]
+----
+- url: ''      # the URL
+  title: ''    # the link tile
+  rel: ''      # the link type (defaults: external)
+----
+
+For instance, the _GitHub_ link placed on the navigation bar utilises the following YAML snippet.
+
+[source, yaml]
+----
+- url: 'https://github.com/ashenm/jekyll-sidebar'
+  title: 'github'
+----
+
+The preceding YAML snippet yields a HTML element equivalent to the following;
+
+[source, html]
+----
+<a class="nav-link" rel="external" href="https://github.com/ashenm/jekyll-sidebar">github</a>
+----
+
+WARNING: The anchor tag text content of the navigation links will be transformed to link:https://en.wikipedia.org/wiki/Capitalization#Title_case[titlecase] and therefor the above will render _Github_ instead of _github_.
+
+==== Sections
+The _Jekyll Sidebar Sections_ serve as the basic blocks for standalone content.
+The placement of a link:https://jekyllrb.com/docs/pages[Jekyll Page] in the root directory will yield a section with a corresponding navbar entry.
+
+NOTE: The navbar entry exerts the filename in the event of an undefined page title.
+
+==== 404
+The _Jekyll Sidebar_ includes a built-in link://ashenm.github.io/jekyll-sidebar/404[404] page to assist ease set-up with minimal exertion.

@@ -1,0 +1,32 @@
+# jekyll config
+safe: true
+timezone: 'Etc/UTC'
+
+# metadata defaults
+lang: 'en'
+title: 'Jekyll Sidebar'
+author: 'Ashen Gunaratne'
+email: 'mail@ashenm.ml'
+keywords: 'ashen, gunaratne, jekyll, theme, two-cloumn, sidebar'
+description: 'A two-column Jekyll theme'
+
+# build excludes
+exclude:
+  - 'README'
+  - 'Makefile'
+  - 'Gemfile'
+  - 'scripts'
+
+# sidebar specifics
+sidebar:
+  excludes:
+    - '404.html'
+    - 'index.html'
+
+# front matter defaults
+defaults:
+  - scope:
+      path: ''
+      type: 'pages'
+    values:
+      layout: 'sidebar'

@@ -1,0 +1,11 @@
+<a class="nav-link {% if page.name == 'index.html' %}font-weight-bolder{% endif %}" href="/">Home</a>
+
+{%- for e in site.pages -%}
+  {%- unless site.sidebar.excludes contains e.name -%}
+    <a class="nav-link {% if page.name == e.name %}font-weight-bolder{% endif %}" href="{{ e.path }}">{{ e.title | default: e.name | remove: ".html" }}</a>
+  {%- endunless -%}
+{%- endfor -%}
+
+{%- for e in site.data.links -%}
+  <a class="nav-link" rel="{{ e.rel | default: 'external' }}" href="{{ e.url }}">{{ e.title }}</a>
+{%- endfor -%}

@@ -1,0 +1,21 @@
+---
+layout: base
+---
+
+<aside id="sidebar" class="d-flex flex-column justify-content-between fixed-top p-2 pl-3 p-md-3 pl-md-4">
+  <header>
+    <h1>
+      <a href="/" class="text-white text-decoration-none">{{ site.title }}</a>
+    </h1>
+    <p class="h6 text-white-50">{{ site.description }}</p>
+  </header>
+  <footer class="text-white-50">
+    <nav class="nav flex-column mb-2">
+      {%- include_relative sidebar/sidebar.html -%}
+    </nav>
+  </footer>
+</aside>
+
+<main class="p-2 p-md-3">
+  {{- content -}}
+</main>
