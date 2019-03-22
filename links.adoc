@@ -1,0 +1,48 @@
+= Links
+
+== [.h1]#{{ page.title }}#
+[.h6.text-muted]#Navbar External Links#
+
+'''
+
+[.mb-0]#The `links.yml` data file facilitates external link placement on the navigation bar for external resources.#
+
+[subs=quotes]
+----
+.
+├── _config.yml
+├── _data
+│   └── [.text-info]#links.yml#
+├── index.html
+    [.text-muted]#...#
+└── sidebar
+    ├── sidebar.css
+    ├── sidebar.html
+    └── sidebar.js
+----
+
+The file mandates the following structure; a YAML list composing of YAML associative arrays where each associative array corresponds to a single link to be placed on the navbar.
+
+[source, yaml]
+----
+- url: ''      # the URL
+  title: ''    # the link tile
+  rel: ''      # the link type (defaults: external)
+----
+
+For instance, the _GitHub_ link placed on the navigation bar utilises the following YAML snippet.
+
+[source, yaml]
+----
+- url: 'https://github.com/ashenm/jekyll-sidebar'
+  title: 'github'
+----
+
+The preceding YAML snippet yields a HTML element equivalent to the following;
+
+[source, html]
+----
+<a class="nav-link" rel="external" href="https://github.com/ashenm/jekyll-sidebar">github</a>
+----
+
+WARNING: The anchor tag text content of the navigation links will be transformed to link:https://en.wikipedia.org/wiki/Capitalization#Title_case[titlecase] and therefor the above will render _Github_ instead of _github_.

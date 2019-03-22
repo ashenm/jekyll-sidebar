@@ -1,0 +1,10 @@
+= Sections
+
+== [.h1]#{{ page.title }}#
+[.h6.text-muted]#Standalone Content Pages#
+
+'''
+
+The placement of a link:https://jekyllrb.com/docs/pages/[Jekyll Page] in the root directory will yield a section with a corresponding navbar entry.
+
+NOTE: The navbar entry exerts the filename in the event of an undefined page title.

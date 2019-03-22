@@ -1,0 +1,18 @@
+dist:
+  xenial
+
+language:
+  minimal
+
+install:
+  ./.travis/install.sh
+
+script:
+  ./.travis/build.sh
+
+deploy:
+  provider: pages
+  local-dir: $BUILD_DESTINATION
+  github-token: $GITHUB_TOKEN
+  on:
+    branch: docs
