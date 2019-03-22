@@ -22,6 +22,28 @@ git clone https://github.com/ashenm/jekyll-sidebar.git
 
 === Constituents
 
+==== Metadata
+
+The `metadata.html` and `scripts.html` link:https://jekyllrb.com/docs/includes/[includes] accommodate injection of additional metadata (i.e style sheets) and scripts into the document head respectively.
+
+For instance, the file ___includes\scripts.html__ embodying the following HTML snippet links link:https://jquery.com/[jQuery] JavaScript library.
+
+[source, html]
+----
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+----
+
+Whereas, the file ___includes\metadata.html__ embodying the following HTML snippet sets the site's favicon and links link:https://fontawesome.com/[Font Awesome] vector icons library.
+
+[source, html]
+----
+<!-- favicon -->
+<link rel="icon" href="https://jekyllrb.com/favicon.ico" />
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous" />
+----
+
 ==== Links
 
 The _Jekyll Sidebar Links_ facilitates external link placement on the navigation bar for external resources via the data file `links.yaml`.
