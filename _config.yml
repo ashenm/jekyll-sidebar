@@ -33,7 +33,7 @@ asciidoctor:
     - page-liquid
     - source-highlighter=pygments
     - pygments-css=style
-    - icons
+    - icons=font
 
 # front matter defaults
 defaults:
