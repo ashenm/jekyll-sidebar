@@ -24,7 +24,7 @@ git clone https://github.com/ashenm/jekyll-sidebar.git
 
 ==== Metadata
 
-The `metadata.html` and `scripts.html` link:https://jekyllrb.com/docs/includes/[includes] accommodate injection of additional metadata (i.e style sheets) and scripts into the document head respectively.
+The _metadata.html_ and _scripts.html_ link:https://jekyllrb.com/docs/includes/[includes] accommodate injection of additional metadata (i.e style sheets) and scripts into the document head respectively.
 
 For instance, the file ___includes\scripts.html__ embodying the following HTML snippet links link:https://jquery.com/[jQuery] JavaScript library.
 
@@ -46,7 +46,7 @@ Whereas, the file ___includes\metadata.html__ embodying the following HTML snipp
 
 ==== Links
 
-The _Jekyll Sidebar Links_ facilitates external link placement on the navigation bar for external resources via the data file `links.yaml`.
+The _Jekyll Sidebar Links_ facilitates external link placement on the navigation bar for external resources via the data file _links.yaml_.
 
 The data file mandates the following structure; a YAML list composing of YAML associative arrays where each associative array corresponds to a single link to be placed on the navbar.
 
