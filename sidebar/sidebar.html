@@ -2,7 +2,7 @@
 
 {%- for e in site.pages -%}
   {%- unless site.sidebar.excludes contains e.name -%}
-    <a class="nav-link {% if page.name == e.name %}font-weight-bolder{% endif %}" href="{{ e.path }}">{{ e.title | default: e.name | remove: ".html" }}</a>
+    <a class="nav-link {% if page.name == e.name %}font-weight-bolder{% endif %}" href="{{ e.url | remove: '.html' }}">{{ e.title | default: e.name | remove: '.html' }}</a>
   {%- endunless -%}
 {%- endfor -%}
 
