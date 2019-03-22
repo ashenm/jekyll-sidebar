@@ -45,4 +45,4 @@ The preceding YAML snippet yields a HTML element equivalent to the following;
 <a class="nav-link" rel="external" href="https://github.com/ashenm/jekyll-sidebar">github</a>
 ----
 
-WARNING: The anchor tag text content of the navigation links will be transformed to link:https://en.wikipedia.org/wiki/Capitalization#Title_case[titlecase] and therefor the above will render _Github_ instead of _github_.
+WARNING: The text content of the navigation anchors will be transformed to link:https://en.wikipedia.org/wiki/Capitalization#Title_case[titlecase] and therefore the above will render _Github_ instead of _github_.
