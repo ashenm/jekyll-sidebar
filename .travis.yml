@@ -14,5 +14,6 @@ deploy:
   provider: pages
   local-dir: $BUILD_DESTINATION
   github-token: $GITHUB_TOKEN
+  fqdn: jekyll-sidebar.ashenm.ml
   on:
     branch: docs
