@@ -15,9 +15,17 @@ image:https://github.com/ashenm/jekyll-sidebar/blob/docs/img/screencast-mobile.g
 toc::[title="", levels=4]
 
 === Getting Started
+
 [source, shell]
 ----
-git clone https://github.com/ashenm/jekyll-sidebar.git
+curl --silent --location --show-error https://github.com/ashenm/jekyll-sidebar/archive/master.zip | \
+  bsdtar --extract --keep-old-files --file - --strip-components 1
+----
+
+Alternately, using Git
+[source, shell]
+----
+git clone https://github.com/ashenm/jekyll-sidebar.git [DIRECTORY]
 ----
 
 === Constituents
