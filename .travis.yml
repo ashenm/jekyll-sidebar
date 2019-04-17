@@ -1,0 +1,13 @@
+language:
+  minimal
+
+deploy:
+  provider: script
+  script: ./.travis/deploy.sh
+
+notifications:
+  slack:
+    rooms:
+      - secure: kE6tpG3RHwJ+YTVRfxGAp1a6yyRz0zkHoPrR3rxx66Msf0hco0nHao/UajYkviYAV37T2k+QqMfaZAD8SR6KueF3Nqz4plB61KYVHc0KcKqTP8EIJCzqhcqwZC84JQfSMNYxjaqy7+bheV1kJDb1fAboXvvrJdd/1j4Dj9JFgjRHJ0j7VQq9ARPpibGsCskfF3i/MvJM4uEWWQ/yVLbDk/KVH8PfE2TVg85o70g1lzft8wJCEl3/k8JLtAzHRUNsccIE5dyhoMY2iN2tbpeH1ECZpfGIksneK4KTDl2Yu6tN1ZYWG02mQtDytYBIcNGn6O13ojSsS/wlf2yn/Urw2wrBxo/4toc6/SdAEzc5uGSRcVqs+4YWlgsch6yVAoDAvv75VfCu5oEOXJd3grah+QAedzK2/NvJ6i/LHB9VEPw9njZpKtRWDUam2eu/PlbI32nHJQSAq3ocPbrnMXzj50I53MdFH8NKBYnRtUSep0KcYFlY6YYByL3o841+U4/qPcgr5TlG1GxSh/Kz7QkkvNtyakvsc02oCj70cL5yoIZ1ueYHJt0U/bCJwFTtGDVxyXoNLXH/ZRfzuAR+nZb8bAwh71u86Wh8O3HXw5kE6Sm/5BLIcifiojSMqh9uznWGfPGXbpPiH54uW74/HF7bgzov6swqNOvaDjWLvGefuMc=
+    on_failure: always
+    on_success: never
