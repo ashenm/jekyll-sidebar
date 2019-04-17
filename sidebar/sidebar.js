@@ -1,26 +1,38 @@
 (function () {
 
-  document.onreadystatechange = function () {
+  document.onreadystatechange = function onDOMContentLoaded () {
 
     // ensure DOMReady
     if (document.readyState !== 'interactive') {
       return;
     }
 
+    // jekyll sidebar
+    document.sidebar = document.getElementById('sidebar');
+
     // skip larger viewports
     if (window.innerWidth >= 576) {
       return;
     }
 
-    // jekyll sidebar
+    // jekyll sidebar interface
     var sidebar = {
 
       // sidebar HTMLElement
-      e: document.getElementById('sidebar'),
+      e: document.sidebar,
+
+      // CSSStyleDeclaration
+      computedStyles: getComputedStyle(document.sidebar),
 
       // toggle visibility
       toggle: function () {
         this.visible ? this.hide() : this.show();
+      },
+
+      // refine sidebar padding to
+      // handle mobile browser toolbars
+      resize: function () {
+        this.e.style.paddingBottom = +this.computedStyles.height.replace('px', '') - window.innerHeight + 8 + 'px';
       },
 
       // glide-out sidebar
@@ -87,9 +99,17 @@
     }, { passive: true });
 
     // stall glide-out on initial view
-    window.setTimeout(function() {
+    window.setTimeout(function () {
       sessionStorage.setItem('recur-view-timeout', 0); sidebar.hide();
     }, sessionStorage.getItem('recur-view-timeout') || 1000);
+
+    // handle toolbar visibility changes
+    window.addEventListener('resize', function () {
+      sidebar.resize();
+    }, { passive: true });
+
+    // initialise
+    sidebar.resize();
 
   };
 

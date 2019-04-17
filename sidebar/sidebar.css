@@ -3,10 +3,11 @@ main {
 }
 
 #sidebar {
-  height: 100vh;
   width: 83.333333%;
   background-color: #a51c30;
-  transition: transform 2s;
+  transition: padding .5s, transform 2s;
+  padding: .5rem;
+  height: 100vh;
   color: #fff;
 }
 
