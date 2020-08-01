@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!-- 
+  Links
+  A two-column Jekyll theme
+  /links.html
+
+  Ashen Gunaratne
+  mail@ashenm.ml
+
+ -->
+<html lang="en">
+<head>
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="A two-column Jekyll theme" />
+  <meta name="keywords" content="ashen, gunaratne, jekyll, theme, two-cloumn, sidebar" />
+  <meta name="author" content="Ashen Gunaratne" />
+
+  <title>Links</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <link rel="stylesheet" href="sidebar/sidebar.css" /><!-- font-awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+
+<!-- asciidoc -->
+<link rel="stylesheet" href="/sidebar/asciidoc.css" />
+
+<!-- favicon -->
+<link rel="icon" href="//jekyllrb.com/favicon.ico" />
+<script src="sidebar/sidebar.js"></script></head>
+<body><aside id="sidebar" class="d-flex flex-column justify-content-between fixed-top pl-3 p-md-3 pl-md-4">
+  <header>
+    <h1>
+      <a href="/" class="text-white text-decoration-none">Jekyll Sidebar</a>
+    </h1>
+    <p class="h6 text-white-50">A two-column Jekyll theme</p>
+  </header>
+  <footer class="text-white-50">
+    <nav class="nav flex-column mb-2"><a class="nav-link " href="/">Home</a><a class="nav-link font-weight-bolder" href="/links">Links</a><a class="nav-link " href="/sections">Sections</a><a class="nav-link" rel="external" href="https://github.com/ashenm/jekyll-sidebar">github</a></nav>
+  </footer>
+</aside>
+
+<main class="p-2 p-md-3"><div class="sect1">
+<h2 id="links"><span class="h1">Links</span></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="h6 text-muted">Navbar External Links</span></p>
+</div>
+<hr>
+<div class="paragraph">
+<p><span class="mb-0">The <code>links.yml</code> data file facilitates external link placement on the navigation bar for external resources.</span></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>.
+├── _config.yml
+├── _data
+│   └── <span class="text-info">links.yml</span>
+├── index.html
+    <span class="text-muted">...</span>
+└── sidebar
+    ├── sidebar.css
+    ├── sidebar.html
+    └── sidebar.js</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The file mandates the following structure; a YAML list composing of YAML associative arrays where each associative array corresponds to a single link to be placed on the navbar.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #f8f8f8;"><code data-lang="yaml"><span></span>- url: <span style="color: #BA2121">&#39;&#39;</span>      <span style="color: #408080; font-style: italic"># the URL</span>
+  title: <span style="color: #BA2121">&#39;&#39;</span>    <span style="color: #408080; font-style: italic"># the link tile</span>
+  rel: <span style="color: #BA2121">&#39;&#39;</span>      <span style="color: #408080; font-style: italic"># the link type (defaults: external)</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For instance, the <em>GitHub</em> link placed on the navigation bar utilises the following YAML snippet.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #f8f8f8;"><code data-lang="yaml"><span></span>- url: <span style="color: #BA2121">&#39;https://github.com/ashenm/jekyll-sidebar&#39;</span>
+  title: <span style="color: #BA2121">&#39;github&#39;</span></code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The preceding YAML snippet yields a HTML element equivalent to the following;</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="pygments highlight" style="background: #f8f8f8;"><code data-lang="html"><span></span>&lt;<span style="color: #008000; font-weight: bold">a</span> <span style="color: #7D9029">class</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;nav-link&quot;</span> <span style="color: #7D9029">rel</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;external&quot;</span> <span style="color: #7D9029">href</span><span style="color: #666666">=</span><span style="color: #BA2121">&quot;https://github.com/ashenm/jekyll-sidebar&quot;</span>&gt;github&lt;/<span style="color: #008000; font-weight: bold">a</span>&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+The text content of the navigation anchors will be transformed to <a href="https://en.wikipedia.org/wiki/Capitalization#Title_case">titlecase</a> and therefore the above will render <em>Github</em> instead of <em>github</em>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div></main>
+</body>
+</html>

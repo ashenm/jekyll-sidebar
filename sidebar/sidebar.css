@@ -1,0 +1,35 @@
+main {
+  margin-left: 5%;
+}
+
+#sidebar {
+  width: 83.333333%;
+  background-color: #a51c30;
+  transition: padding .5s, transform 2s;
+  padding: .5rem;
+  height: 100vh;
+  color: #fff;
+}
+
+#sidebar .nav .nav-link {
+  padding-left: 0;
+  padding-right: 0;
+  text-transform: capitalize;
+  font-size: 1.25rem;
+  width: fit-content;
+  color: #fff;
+}
+
+#sidebar .nav .nav-link:hover {
+  text-decoration: underline;
+}
+
+@media (min-width: 576px) {
+  main { margin-left: 33.333333%; }
+  #sidebar { width: 33.333333%; }
+}
+
+@media (min-width: 992px) {
+  main { margin-left: 25%; }
+  #sidebar { width: 25%; }
+}
