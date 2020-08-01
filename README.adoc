@@ -6,7 +6,7 @@
 
 [discrete]
 ====== The Jekyll Sidebar is a mobile-first two-column Jekyll theme inspired by link:http://hyde.getpoole.com[Hyde].
-image:https://travis-ci.org/ashenm/jekyll-sidebar.svg?branch=docs["Build Status", link="https://travis-ci.org/ashenm/jekyll-sidebar"]
+image:https://travis-ci.com/ashenm/jekyll-sidebar.svg?branch=docs["Build Status", link="https://travis-ci.com/ashenm/jekyll-sidebar"]
 
 image:https://github.com/ashenm/jekyll-sidebar/blob/docs/img/screencast-mobile.gif["A Jekyll Sidebar Site on A Mobile Device", height="360"] image:https://github.com/ashenm/jekyll-sidebar/blob/docs/img/screenshot.png["A Jekyll Sidebar Site on A Larger Device", height="360"]
 
